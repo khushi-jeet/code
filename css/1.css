@@ -1,0 +1,33 @@
+* ========================================================
+  CSS VARIABLES — change colors here for theming
+  All colors live here so you only edit ONE place
+======================================================== */
+:root {
+  --bg:       #0f0f0d;      /* page background */
+  --surface:  #1c1c19;      /* cards / panels */
+  --border:   #2a2a26;      /* subtle borders */
+  --ink:      #e8e6df;      /* primary text */
+  --ink2:     #9a9890;      /* secondary text */
+  --accent:   #4a8fd4;      /* blue highlight */
+
+  /* Bar colors — each state gets its own color */
+  --c-default:   #3a3a35;   /* untouched bars */
+  --c-comparing: #c8841a;   /* bars being compared */
+  --c-swapping:  #a02f24;   /* bars being swapped */
+  --c-sorted:    #256642;   /* finalized bars */
+  --c-pivot:     #6a3da0;   /* pivot in quicksort */
+  --c-found:     #256642;   /* target found */
+  --c-elim:      #2a2a26;   /* eliminated (binary search) */
+  --c-mid:       #6a3da0;   /* mid pointer (binary search) */
+}
+
+/* ========================================================
+  RESET & BASE
+======================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+}
