@@ -114,12 +114,5 @@
 .cm { color: #5a5850; font-style: italic; } /* comments */
 .nm { color: #2e9e6e; }   /* number literals */
 
-/* ========================================================
-  RESPONSIVE — stack on mobile
-======================================================== */
-@media (max-width: 720px) {
-  .layout { grid-template-columns: 1fr; }
-  .sidebar { border-right: none; border-bottom: 1px solid var(--border); padding: 16px 0; }
-  .main   { padding: 16px 0; }
-  .algo-nav { flex-direction: column; }
-}
+
+
