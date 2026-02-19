@@ -1,0 +1,138 @@
+/* ========================================================
+LAYOUT — simple 2-column: sidebar + main
+======================================================== */
+.wrap    { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.layout  { display: grid; grid-template-columns: 220px 1fr; gap: 0; min-height: calc(100vh - 80px); }
+.sidebar { border-right: 1px solid var(--border); padding: 24px 20px 24px 0; display: flex; flex-direction: column; gap: 24px; }
+.main    { padding: 24px 0 24px 28px; display: flex; flex-direction: column; gap: 14px; }
+
+/* ========================================================
+  HEADER
+======================================================== */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; }
+.logo { font-family: 'IBM Plex Mono', monospace; font-size: 1.3rem; color: var(--ink); }
+.logo em { color: var(--accent); font-style: italic; }
+.byline { font-family: 'IBM Plex Mono', monospace; font-size: .65rem; color: var(--ink2); }
+
+/* ========================================================
+  NAVIGATION — dropdown selects for algo choice
+======================================================== */
+.algo-nav {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  align-items: center;
+}
+.nav-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink2);
+  display: block;
+  margin-bottom: 6px;
+}
+/* ---- THE DROPDOWN SELECT ---- */
+.algo-select {
+  padding: 9px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--ink);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .75rem;
+  cursor: pointer;
+  outline: none;
+  min-width: 180px;
+}
+.algo-select:focus { border-color: var(--accent); }
+
+/* ========================================================
+  SIDEBAR — algo info + controls
+======================================================== */
+.section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .58rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink2);
+  margin-bottom: 8px;
+}
+.algo-title { font-size: 1.1rem; font-weight: 500; margin-bottom: 8px; }
+.algo-desc  { font-size: .82rem; color: var(--ink2); line-height: 1.6; }
+
+/* Complexity grid — 2x2 little boxes */
+.cx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.cx-cell {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 4px;
+}
+.cx-label { font-family: 'IBM Plex Mono', monospace; font-size: .55rem; text-transform: uppercase; color: var(--ink2); margin-bottom: 2px; }
+.cx-val   { font-family: 'IBM Plex Mono', monospace; font-size: .8rem; font-weight: 600; }
+
+/* Controls */
+.ctrl-group { margin-bottom: 14px; }
+.ctrl-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .6rem;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: var(--ink2);
+  margin-bottom: 7px;
+}
+.ctrl-label span { color: var(--ink); font-weight: 600; }
+
+/* Range slider */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%; height: 2px;
+  background: var(--border);
+  outline: none; cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 13px; height: 13px;
+  border-radius: 50%;
+  background: var(--ink);
+  cursor: pointer;
+}
+
+/* Text / number input */
+input[type=text], input[type=number] {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--ink);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .75rem;
+  padding: 8px 10px;
+  outline: none;
+}
+input[type=text]:focus, input[type=number]:focus { border-color: var(--accent); }
+input::placeholder { color: var(--ink2); }
+
+.apply-btn {
+  margin-top: 6px; width: 100%; padding: 8px;
+  background: none; border: 1px solid var(--border);
+  border-radius: 4px; color: var(--ink2);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .62rem; letter-spacing: .8px;
+  text-transform: uppercase; cursor: pointer;
+}
+.apply-btn:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+/* Legend */
+.legend-list { display: flex; flex-direction: column; gap: 6px; }
+.legend-row  { display: flex; align-items: center; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: .62rem; color: var(--ink2); text-transform: uppercase; }
+.legend-swatch { width: 14px; height: 6px; border-radius: 1px; flex-shrink: 0; }
