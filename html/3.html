@@ -1,0 +1,69 @@
+<div class="wrap">
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div>
+        <div class="section-label">Algorithm</div>
+        <div class="algo-title" id="algoTitle">—</div>
+        <p class="algo-desc" id="algoDesc">Select an algorithm to begin.</p>
+      </div>
+      <div>
+        <div class="section-label">Complexity</div>
+        <div class="cx-grid" id="cxGrid"></div>
+      </div>
+      <div>
+        <div class="section-label">Controls</div>
+        <div class="ctrl-group" id="sizeCtrl">
+          <div class="ctrl-label">Array Size <span id="sizeVal">20</span></div>
+          <input type="range" id="sizeSlider" min="5" max="50" value="20">
+        </div>
+        <div class="ctrl-group">
+          <div class="ctrl-label">Speed <span id="speedVal">Medium</span></div>
+          <input type="range" id="speedSlider" min="1" max="5" value="3">
+        </div>
+        <div class="ctrl-group">
+          <div class="ctrl-label">Custom Array</div>
+          <input type="text" id="customInput" placeholder="e.g. 8, 34, 12, 56">
+          <button class="apply-btn" id="applyCustom">Apply</button>
+        </div>
+        <div class="ctrl-group" id="targetCtrl" style="display:none">
+          <div class="ctrl-label">Search Target</div>
+          <input type="number" id="targetInput" placeholder="e.g. 42">
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Legend</div>
+        <div class="legend-list" id="legendList"></div>
+      </div>
+    </aside>
+
+    <section class="main">
+      <div class="status-line">
+        <div class="status-msg">
+          <div class="status-dot" id="statusDot"></div>
+          <span id="statusText">Select an algorithm to start</span>
+        </div>
+        <div class="step-count" id="stepCount">— / —</div>
+      </div>
+      <div class="viz-canvas" id="vizCanvas"></div>
+      <div class="code-panel">
+        <div class="code-header">C++ Code</div>
+        <div class="code-body" id="codeBody"></div>
+      </div>
+      <div class="action-bar">
+        <button class="btn btn-solid"   id="runBtn"      disabled>Run</button>
+        <button class="btn btn-outline" id="stepBackBtn" disabled>← Back</button>
+        <button class="btn btn-outline" id="stepBtn"     disabled>Step →</button>
+        <button class="btn btn-outline" id="pauseBtn"    disabled>Pause</button>
+        <div class="btn-divider"></div>
+        <button class="btn btn-ghost"   id="resetBtn"    disabled>Reset</button>
+        <button class="btn btn-ghost"   id="shuffleBtn"  disabled>Shuffle</button>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
